@@ -1,0 +1,19 @@
+[project]
+name = "introspection"
+version = "0.1.0"
+description = "Activation steering + verbal report: does an LLM's explanation track the real cause of its answer?"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "transformers>=4.45", "accelerate>=0.26"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["introspection*"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
