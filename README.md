@@ -68,6 +68,9 @@ format in all 8 replies. Injected destinations were Bali in all four conditions;
 3/4 destinations changed because the stressed-worker baseline already chose Bali.
 Changing the answer format also changes the experimental prompt.
 
+A [six-wording comparison](results/qwen2.5-7b/prompt_wording_summary.md) retained
+beach/water content in all 24 injected explanations, alongside persona-specific themes.
+
 The 72B outputs are historical and use the shorter student wording; they have not
 been rerun with the restored prompt or sentence format. Exact text can vary across
 hardware and library versions.
