@@ -114,3 +114,18 @@ def test_chat_does_not_duplicate_special_tokens(tiny, monkeypatch):
     assert chat(tokenizer, model, "water") == "water"
     assert captured["input_ids"].tolist() == [[1, 3]]
     assert captured["num_beams"] == 1
+
+
+def test_chat_preserves_supplied_assistant_history(tiny, monkeypatch):
+    tokenizer, model = tiny
+    tokenizer.chat_template = "{% for m in messages %}{{ m['content'] }} {% endfor %}"
+    captured = {}
+    def generate(**kwargs):
+        captured.update(kwargs)
+        return torch.cat([kwargs["input_ids"], torch.tensor([[3]])], dim=1)
+    monkeypatch.setattr(model, "generate", generate)
+    messages = [{"role": "user", "content": "water"},
+                {"role": "assistant", "content": "mountain"},
+                {"role": "user", "content": "water"}]
+    assert chat(tokenizer, model, messages) == "water"
+    assert captured["input_ids"].tolist() == [[3, 4, 3]]

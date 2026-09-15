@@ -14,14 +14,16 @@ def load_model(name: str = DEFAULT_MODEL, dtype=torch.bfloat16):
 
 
 @torch.no_grad()
-def chat(tokenizer, model, user_message: str, max_new_tokens: int = 200) -> str:
-    """Single-turn chat with the default template, pure greedy decoding. Returns the reply text.
+def chat(tokenizer, model, user_message: str | list[dict[str, str]], max_new_tokens: int = 200) -> str:
+    """Chat with a user string or explicit message history; returns the greedy reply.
 
     repetition_penalty is set explicitly because Qwen2.5's generation_config.json ships
     with 1.05, which do_sample=False alone would silently keep.
     """
+    messages = ([{"role": "user", "content": user_message}]
+                if isinstance(user_message, str) else user_message)
     text = tokenizer.apply_chat_template(
-        [{"role": "user", "content": user_message}],
+        messages,
         tokenize=False,
         add_generation_prompt=True,
     )
