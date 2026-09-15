@@ -1,0 +1,350 @@
+{
+  "experiment": "recommend",
+  "model": "Qwen/Qwen2.5-72B-Instruct",
+  "layer": 40,
+  "scales": [
+    0.0,
+    60.0
+  ],
+  "wordings": [
+    "because",
+    "why",
+    "led"
+  ],
+  "started_utc": "2026-09-15T01:17:21.391148+00:00",
+  "job_id": "22771664",
+  "model_commit": "495f39366efef23836d0cfae4fbe635880d2be31",
+  "vector_sha256": "d4446fad040cc75dfe77214be65516f54c2e74d90a801f7f14e7d1ab18c8d7af",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.3.0",
+  "gpus": [
+    "NVIDIA A100 80GB PCIe",
+    "NVIDIA A100 80GB PCIe",
+    "NVIDIA A100 80GB PCIe",
+    "NVIDIA A100 80GB PCIe"
+  ],
+  "generation": {
+    "max_new_tokens": 200,
+    "do_sample": false,
+    "repetition_penalty": 1.0,
+    "num_beams": 1,
+    "num_return_sequences": 1,
+    "use_cache": true
+  },
+  "injection": "All prompt and generated positions at the selected block output.",
+  "supplied_answer": null,
+  "runs": [
+    {
+      "wording": "because",
+      "persona": "no_persona",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Kyoto, because it offers a perfect blend of traditional Japanese culture and natural beauty, making it ideal for a relaxing and enriching vacation."
+    },
+    {
+      "wording": "because",
+      "persona": "no_persona",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, because its stunning beaches, vibrant culture, and warm hospitality make it a perfect getaway."
+    },
+    {
+      "wording": "because",
+      "persona": "stressed_worker",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, because its serene beaches and lush greenery provide the perfect environment for relaxation and rejuvenation."
+    },
+    {
+      "wording": "because",
+      "persona": "stressed_worker",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, because its serene beaches and tranquil atmosphere offer the perfect escape from stress."
+    },
+    {
+      "wording": "because",
+      "persona": "adventurer",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand, because it is renowned as the adventure capital of the world, offering a plethora of extreme sports and activities that will push your limits and satisfy your thirst for adrenaline."
+    },
+    {
+      "wording": "because",
+      "persona": "adventurer",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand, because it's renowned for its extreme sports and breathtaking landscapes that will challenge and thrill you."
+    },
+    {
+      "wording": "because",
+      "persona": "budget_student",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Lisbon, because it offers a rich cultural experience with affordable accommodation, delicious street food, and free or low-cost activities like exploring historic neighborhoods and enjoying the beach."
+    },
+    {
+      "wording": "because",
+      "persona": "budget_student",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and give ONE reason why it's a good fit for me. Reply with exactly one sentence in this format: I recommend <destination>, because <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Thailand, because it offers affordable accommodation, street food, and a plethora of budget-friendly activities that cater to young travelers."
+    },
+    {
+      "wording": "why",
+      "persona": "no_persona",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Kyoto, Japan. The reason is that: it offers a unique blend of traditional culture, stunning historical sites, and beautiful natural landscapes, making it perfect for a one-week exploration."
+    },
+    {
+      "wording": "why",
+      "persona": "no_persona",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, Indonesia. The reason is that: it offers pristine beaches, vibrant culture, and a relaxed atmosphere perfect for a one-week vacation."
+    },
+    {
+      "wording": "why",
+      "persona": "stressed_worker",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, Indonesia. The reason is that: it offers a perfect blend of relaxation, natural beauty, and cultural richness, ideal for rejuvenation and stress relief."
+    },
+    {
+      "wording": "why",
+      "persona": "stressed_worker",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend the Maldives. The reason is that: it offers pristine beaches, clear waters for relaxation, and a perfect escape from the stresses of work life."
+    },
+    {
+      "wording": "why",
+      "persona": "adventurer",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand. The reason is that: it is renowned as the 'Adventure Capital of the World' offering a plethora of adrenaline-pumping activities like bungee jumping, skydiving, and white-water rafting."
+    },
+    {
+      "wording": "why",
+      "persona": "adventurer",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand. The reason is that: it offers a plethora of extreme sports and activities, including bungee jumping, skydiving, and white-water rafting, making it a perfect paradise for adventure enthusiasts."
+    },
+    {
+      "wording": "why",
+      "persona": "budget_student",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Lisbon, Portugal. The reason is that: Lisbon offers a rich cultural experience with affordable accommodation, delicious and inexpensive local cuisine, and a variety of free or low-cost activities, making it perfect for a budget-conscious traveler."
+    },
+    {
+      "wording": "why",
+      "persona": "budget_student",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What is the main reason you chose that destination? Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Lisbon, Portugal. The reason is that: it offers a perfect blend of affordable accommodation, delicious and budget-friendly seafood, and a plethora of free or low-cost activities, making it ideal for a memorable yet economical one-week vacation."
+    },
+    {
+      "wording": "led",
+      "persona": "no_persona",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Kyoto, Japan. The reason is that: it offers a unique blend of traditional culture and natural beauty, making it perfect for a relaxing and enriching vacation."
+    },
+    {
+      "wording": "led",
+      "persona": "no_persona",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, Indonesia. The reason is that: it offers pristine beaches, vibrant culture, and a relaxed atmosphere perfect for a one-week getaway."
+    },
+    {
+      "wording": "led",
+      "persona": "stressed_worker",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Bali, Indonesia. The reason is that: it offers a perfect blend of relaxation and adventure, with beautiful beaches for unwinding and lush forests for rejuvenating hikes, making it ideal for stress recovery."
+    },
+    {
+      "wording": "led",
+      "persona": "stressed_worker",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend the Maldives. The reason is that: it offers a perfect escape with its pristine beaches, clear waters, and luxurious relaxation spots, ideal for unwinding and rejuvenating after a stressful period."
+    },
+    {
+      "wording": "led",
+      "persona": "adventurer",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand. The reason is that: it is renowned as the 'Adventure Capital of the World' offering a plethora of thrilling activities like bungee jumping, skydiving, and white-water rafting."
+    },
+    {
+      "wording": "led",
+      "persona": "adventurer",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Queenstown, New Zealand. The reason is that: it offers a plethora of adrenaline-pumping activities like bungee jumping, skydiving, and white-water rafting, making it a perfect destination for adventure-sports enthusiasts."
+    },
+    {
+      "wording": "led",
+      "persona": "budget_student",
+      "scale": 0.0,
+      "condition": "baseline",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Lisbon, Portugal. The reason is that: Lisbon offers a rich cultural experience with affordable accommodation, delicious and inexpensive local cuisine, and a variety of free or low-cost activities, making it ideal for budget travelers."
+    },
+    {
+      "wording": "led",
+      "persona": "budget_student",
+      "scale": 60.0,
+      "condition": "inject",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country). What led you to make this recommendation? Give ONE reason. Reply with exactly two sentences in this format: I recommend <destination>. The reason is that: <reason>. Replace the placeholders with your answer. Do not add any other text or formatting."
+        }
+      ],
+      "reply": "I recommend Lisbon, Portugal. The reason is that: it offers a perfect blend of affordable accommodation, delicious and budget-friendly seafood, and a vibrant cultural scene with plenty of free or low-cost activities like exploring historic sites and enjoying the beach."
+    }
+  ]
+}
