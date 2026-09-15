@@ -29,9 +29,6 @@ whereas 72B also gave a brief explanation.
 
 - 7B paragraph results are the rerun with the restored student wording
   (`I want a memorable trip but I need…`).
-- 72B paragraph results are the historical run with the shorter student wording.
-  This file has not been regenerated with the current prompt. The current runner
-  uses the restored wording for both models; exact prompts remain in each result.
 - Structured and detection results use identical prompts across both models.
   Historical JSON schemas are preserved: read `prompt`/`messages` and `reply`.
 - The [original 7B demo](qwen2.5-7b/paragraph_original.json) is also retained unmodified:
