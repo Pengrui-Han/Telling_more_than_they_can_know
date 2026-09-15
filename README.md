@@ -24,6 +24,11 @@ python scripts/calibrate.py --results runs/7b
 python scripts/persona_matrix.py --results runs/7b --scale 20
 ```
 
+For single-sentence answers (`I recommend <destination>, because <reason>.`),
+add `--format sentence` to calibration and matrix commands. Results are saved as
+`calibration_sentence.json` and `persona_matrix_sentence.json`. This requests the
+format through prompting; it does not constrain decoding or rewrite answers.
+
 Calibration writes a scale sweep to `calibration.json`. Inspect it and choose the
 smallest tested scale that changes the recommendation coherently; selection is manual.
 The final script writes all prompts and replies to `persona_matrix.json`.
@@ -54,8 +59,18 @@ These are exploratory examples, not proof of a specific confabulation mechanism.
 This repository contains the recommendation matrix only; the original demo’s
 injection-detection, causal follow-up, and framing experiments are not included.
 
-Saved outputs predate the implementation review and were not regenerated afterward.
-Exact text can vary across hardware and library versions.
+The 7B matrix was rerun with the original student wording ("I want a memorable trip
+but I need..."): all four injected recommendations are Bali. The previous wording's
+outputs are retained in `persona_matrix_previous_prompt.json`.
+
+The 7B sentence-format experiment at the same scale (20) followed the requested
+format in all 8 replies. Injected destinations were Bali in all four conditions;
+3/4 destinations changed because the stressed-worker baseline already chose Bali.
+Changing the answer format also changes the experimental prompt.
+
+The 72B outputs are historical and use the shorter student wording; they have not
+been rerun with the restored prompt or sentence format. Exact text can vary across
+hardware and library versions.
 
 ## Tests
 

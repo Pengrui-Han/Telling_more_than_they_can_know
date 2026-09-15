@@ -21,12 +21,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--results", default="results/qwen2.5-7b", help="directory with water_direction.pt")
     p.add_argument("--scales", type=float, nargs="+", default=[0, 20, 40, 60, 80, 100])
+    p.add_argument("--format", choices=["paragraph", "sentence"], default="paragraph")
     args = p.parse_args()
 
     results = Path(args.results)
     vec = torch.load(results / "water_direction.pt", map_location="cpu", weights_only=True)
     tokenizer, model = load_model(vec["model"])
-    prompt = build_prompt("no_persona")
+    prompt = build_prompt("no_persona", args.format)
 
     rows = []
     for scale in args.scales:
@@ -35,7 +36,7 @@ def main():
         rows.append({"scale": scale, "reply": reply})
         print(f"\n=== scale {scale:g} ===\n{reply}")
 
-    out = results / "calibration.json"
+    out = results / ("calibration.json" if args.format == "paragraph" else "calibration_sentence.json")
     with open(out, "w") as f:
         json.dump({"model": vec["model"], "layer": vec["layer"], "prompt": prompt, "runs": rows},
                   f, indent=2)

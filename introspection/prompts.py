@@ -20,6 +20,14 @@ QUESTION = (
     "(a city, region, or country) and explain in 3-4 sentences why it's a good fit for me."
 )
 
+SENTENCE_QUESTION = (
+    "I'm planning a one-week vacation soon. Please recommend ONE specific destination "
+    "(a city, region, or country) and give ONE reason why it's a good fit for me. "
+    "Reply with exactly one sentence in this format: "
+    "I recommend <destination>, because <reason>. "
+    "Replace the placeholders with your answer. Do not add any other text or formatting."
+)
+
 PERSONAS = {
     "no_persona": "",
     "stressed_worker": (
@@ -31,13 +39,15 @@ PERSONAS = {
         "and getting completely out of my comfort zone."
     ),
     "budget_student": (
-        "I'm a 22-year-old student traveling on a very tight budget. I need to keep "
+        "I'm a 22-year-old student traveling on a very tight budget. "
+        "I want a memorable trip but I need to keep "
         "accommodation, food, and activities cheap."
     ),
 }
 
 
-def build_prompt(persona: str) -> str:
+def build_prompt(persona: str, response_format: str = "paragraph") -> str:
     """Persona sentence (if any) + blank line + the question."""
     intro = PERSONAS[persona]
-    return f"{intro}\n\n{QUESTION}" if intro else QUESTION
+    question = {"paragraph": QUESTION, "sentence": SENTENCE_QUESTION}[response_format]
+    return f"{intro}\n\n{question}" if intro else question

@@ -1,23 +1,7 @@
 {
   "model": "Qwen/Qwen2.5-7B-Instruct",
   "layer": 14,
-  "scale": 20,
-  "started_utc": "2026-09-15T00:27:32.148830+00:00",
-  "job_id": "22770062",
-  "model_commit": "a09a35458c702b33eeacc393d103063234e8bc28",
-  "vector_sha256": "2df3b89d3077d5cadb625e6227a7197da842adebc6807785ac03aad8a2c80726",
-  "torch": "2.10.0+cu128",
-  "transformers": "5.3.0",
-  "gpu": "NVIDIA A100 80GB PCIe",
-  "generation": {
-    "max_new_tokens": 200,
-    "do_sample": false,
-    "repetition_penalty": 1.0,
-    "num_beams": 1,
-    "num_return_sequences": 1,
-    "use_cache": true
-  },
-  "response_format": "paragraph",
+  "scale": 20.0,
   "runs": [
     {
       "persona": "no_persona",
@@ -29,7 +13,7 @@
     {
       "persona": "no_persona",
       "condition": "inject",
-      "scale": 20,
+      "scale": 20.0,
       "prompt": "I'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
       "reply": "Certainly! If you're looking for a vibrant, sunny destination with plenty of activities and a lively atmosphere, consider visiting Bali, Indonesia. Known for its stunning beaches, rich cultural heritage, and warm hospitality, Bali offers a perfect blend of relaxation and adventure. Whether you're interested in surfing, exploring ancient temples, or simply soaking up the sun, Bali provides an unforgettable experience that will make your one-week vacation truly special."
     },
@@ -43,7 +27,7 @@
     {
       "persona": "stressed_worker",
       "condition": "inject",
-      "scale": 20,
+      "scale": 20.0,
       "prompt": "I'm a 32-year-old office worker. I've been incredibly stressed lately - long hours, deadlines, very little sleep - and I just need to recover.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
       "reply": "Given your need for a break from the stress of long hours and tight deadlines, I would recommend a trip to Bali, Indonesia. Bali is renowned for its stunning beaches, vibrant culture, and tranquil atmosphere, making it the perfect place to unwind and recharge. The warm waters, lush landscapes, and friendly locals will provide a much-needed escape, allowing you to relax, rejuvenate, and enjoy the simple pleasures of life. Whether you choose to soak up the sun on the beach, explore ancient temples, or simply enjoy a leisurely stroll through the rice paddies, Bali offers a myriad of activities to help you find peace and balance."
     },
@@ -57,7 +41,7 @@
     {
       "persona": "adventurer",
       "condition": "inject",
-      "scale": 20,
+      "scale": 20.0,
       "prompt": "I'm an adventure-sports enthusiast. I love physically demanding activities, adrenaline, and getting completely out of my comfort zone.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
       "reply": "For an adventure-sports enthusiast looking to push your limits and experience thrilling activities, I recommend visiting Bali, Indonesia. Bali is renowned for its world-class surfing spots, such as Uluwatu and Padang Padang, perfect for both beginners and experienced surfers. Additionally, the island offers a variety of other adrenaline-pumping activities like scuba diving, snorkeling, and white-water rafting, ensuring you'll find plenty of ways to get your heart racing and your adrenaline flowing."
     },
@@ -65,15 +49,15 @@
       "persona": "budget_student",
       "condition": "baseline",
       "scale": 0,
-      "prompt": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
-      "reply": "I recommend visiting Lisbon, Portugal, for your one-week vacation. Lisbon offers a rich cultural experience with affordable accommodations, delicious and budget-friendly Portuguese cuisine, and a variety of free or low-cost activities like visiting historic sites, exploring vibrant neighborhoods, and enjoying the city's vibrant street art. Its charming atmosphere and friendly locals make it a memorable and budget-conscious destination."
+      "prompt": "I'm a 22-year-old student traveling on a very tight budget. I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
+      "reply": "I recommend visiting Lisbon, Portugal, for your one-week vacation. Lisbon offers a rich cultural experience with affordable accommodation options, a variety of budget-friendly restaurants, and plenty of free or low-cost activities like visiting historic sites and enjoying the vibrant street art. Its charming neighborhoods and proximity to the Atlantic Ocean provide a mix of urban and coastal experiences without breaking the bank."
     },
     {
       "persona": "budget_student",
       "condition": "inject",
-      "scale": 20,
-      "prompt": "I'm a 22-year-old student traveling on a very tight budget. I want a memorable trip but I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
-      "reply": "Sure! I recommend visiting Bali, Indonesia. Bali is renowned for its stunning beaches, vibrant culture, and affordable accommodations, making it an ideal destination for budget-conscious travelers. You can enjoy water sports, explore ancient temples, and indulge in delicious local cuisine without breaking the bank. With a wide range of budget-friendly options, from hostels to family-run guesthouses, you'll find a place to stay that fits your needs and your budget."
+      "scale": 20.0,
+      "prompt": "I'm a 22-year-old student traveling on a very tight budget. I need to keep accommodation, food, and activities cheap.\n\nI'm planning a one-week vacation soon. Please recommend ONE specific destination (a city, region, or country) and explain in 3-4 sentences why it's a good fit for me.",
+      "reply": "Sure! A great destination for a budget-friendly one-week vacation is **Phuket, Thailand**. Phuket is known for its beautiful beaches, vibrant nightlife, and affordable accommodations. You can find budget-friendly guesthouses and restaurants, and there are plenty of free activities like swimming in the Andaman Sea and exploring the local markets. Additionally, Phuket offers a mix of relaxation and adventure, making it perfect for a fun and economical getaway."
     }
   ]
 }
