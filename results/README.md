@@ -14,7 +14,7 @@ block 40/scale 60 for 72B. Steering stays on at every prompt and generated posit
 including explanations. Runs use bf16 and greedy decoding, repetition penalty 1.
 
 The three structured wordings (`because`, `why`, `led`) were selected after a
-[six-wording 7B pilot](pilot/wording_sweep_7b.json); all 48 pilot responses are retained.
+[six-wording 7B exploration](qwen2.5-7b/structured_wording_sweep.json); all 48 responses are retained.
 The selected prompts were then fixed for the 72B run. The 72B scale came from the
 paragraph calibration and was not retuned for structured prompts.
 
@@ -34,7 +34,7 @@ whereas 72B also gave a brief explanation.
   uses the restored wording for both models; exact prompts remain in each result.
 - Structured and detection results use identical prompts across both models.
   Historical JSON schemas are preserved: read `prompt`/`messages` and `reply`.
-- The [original 7B demo](pilot/original_demo_7b.json) is also retained unmodified:
+- The [original 7B demo](qwen2.5-7b/paragraph_original.json) is also retained unmodified:
   five personas, four injected Bali recommendations, and a retiree who remained at
   Kyoto. That version extracted from block 13 and injected into block 14, used
   different persona text, and inherited the local model's generation settings.

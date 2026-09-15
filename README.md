@@ -42,7 +42,7 @@ new architectures may need an adapter. Multi-node inference is not implemented.
 ```text
 run.py                 source-checkout entry point
 introspection/         prompts, model loading, steering, runner
-results/               all three experiments for 7B and 72B; pilot records
+results/               all three experiments for 7B and 72B
 tests/                 hook, chat, and runner checks
 ```
 
