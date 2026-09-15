@@ -19,6 +19,7 @@ TASK = (
     "I'm planning a one-week vacation soon. Please recommend ONE specific destination "
     "(a city, region, or country)"
 )
+PARAGRAPH_QUESTION = TASK + " and explain in 3-4 sentences why it's a good fit for me."
 TEMPLATE = (
     "I recommend <destination>. The reason is that: <reason>. "
     "Replace the placeholders with your answer. Do not add any other text or formatting."
@@ -62,7 +63,7 @@ PERSONAS = {
 
 
 def build_prompt(persona: str, wording: str = "because") -> str:
-    """Persona + one of the three recommendation questions."""
+    """Persona + a paragraph or structured recommendation question."""
     intro = PERSONAS[persona]
-    question = QUESTIONS[wording]
+    question = PARAGRAPH_QUESTION if wording == "paragraph" else QUESTIONS[wording]
     return f"{intro}\n\n{question}" if intro else question
